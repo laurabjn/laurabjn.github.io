@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>React Native : une appli pour iOS et Android · Laura Bojon</title>
+<meta name="description" content="Comment React Native permet de développer une seule application pour iOS et Android, ses avantages, ses limites et quand le choisir.">
+<meta name="author" content="Laura Bojon">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://laurabojon.fr/articles/react-native-ios-android/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Laura Bojon">
+<meta property="og:url" content="https://laurabojon.fr/articles/react-native-ios-android/">
+<meta property="og:title" content="React Native : une appli pour iOS et Android · Laura Bojon">
+<meta property="og:description" content="Comment React Native permet de développer une seule application pour iOS et Android, ses avantages, ses limites et quand le choisir.">
+<meta property="og:image" content="https://laurabojon.fr/assets/partage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F8F3F0">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/jost-normal-300-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="/script.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://laurabojon.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://laurabojon.fr/articles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "React Native : une seule application pour iOS et Android",
+      "item": "https://laurabojon.fr/articles/react-native-ios-android/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "React Native : une seule application pour iOS et Android",
+  "description": "Comment React Native permet de développer une seule application pour iOS et Android, ses avantages, ses limites et quand le choisir.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "inLanguage": "fr-FR",
+  "mainEntityOfPage": "https://laurabojon.fr/articles/react-native-ios-android/",
+  "image": "https://laurabojon.fr/assets/partage.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Laura Bojon",
+    "url": "https://laurabojon.fr/"
+  },
+  "publisher": {
+    "@id": "https://laurabojon.fr/#activite"
+  }
+}
+</script>
+</head>
+<body id="haut">
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/assets/logo-lb.png" width="189" height="176" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Laura Bojon</span>
+        <span class="brand-tagline">Développeuse web et mobile</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="site-nav" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#methode">Méthode</a></li>
+        <li><a href="/#projets">Projets</a></li>
+        <li><a href="/#apropos">À propos</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/articles/">Articles</a></li>
+      </ul>
+      <a class="btn btn-small" href="/#contact">Me contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <ol class="wrap">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/articles/">Articles</a></li>
+      <li aria-current="page">React Native : une seule application pour iOS et Android</li>
+    </ol>
+  </nav>
+
+  <article class="section article">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Article</p>
+        <h1>React Native : une seule application pour iOS et Android</h1>
+        <p class="article-meta">Publié le <time datetime="2026-11-19">19 novembre 2026</time> · 2 min de lecture · Laura Bojon</p>
+        <p class="lead">Faut-il développer deux applications, une pour l'iPhone et une pour Android ? Avec React Native, une seule base de code suffit dans la plupart des cas. Voici comment ça marche, et quand ce n'est pas le bon choix.</p>
+      </header>
+      <div class="prose">
+<h2>Natif ou multiplateforme</h2>
+<p>Une application <strong>native</strong> est écrite dans le langage propre à chaque système : Swift pour iOS, Kotlin pour Android. Il faut donc deux applications, deux bases de code, et souvent deux équipes.</p>
+<p>Une application <strong>multiplateforme</strong> est écrite une seule fois, puis fonctionne sur les deux systèmes. React Native est l'une des solutions les plus répandues pour y parvenir.</p>
+
+<h2>React Native en deux mots</h2>
+<p>React Native est un framework open source créé par Meta. On y développe en JavaScript ou en TypeScript, avec React, et l'application affiche de vrais composants natifs : ce n'est pas une page web glissée dans une application.</p>
+<p><strong>Expo</strong> complète React Native avec des outils pour développer, tester, publier sur les stores et diffuser certaines mises à jour plus rapidement.</p>
+
+<h2>Les avantages pour votre projet</h2>
+<ul>
+<li><strong>Un budget et des délais réduits</strong> : une seule base de code au lieu de deux.</li>
+<li><strong>Les mêmes fonctionnalités en même temps</strong> sur iPhone et sur Android.</li>
+<li><strong>Des évolutions plus simples</strong> : une correction profite immédiatement aux deux versions.</li>
+<li><strong>Un écosystème riche</strong> : paiement, notifications, cartes, connexion à Firebase ou à votre propre serveur.</li>
+</ul>
+
+<h2>Ses limites</h2>
+<p>Pour une application qui repose sur des fonctions très avancées du téléphone (réalité augmentée poussée, jeux 3D exigeants, matériel très spécifique), le natif reste parfois préférable. Certaines intégrations demandent aussi un peu de développement natif en complément. Pour la grande majorité des applications (réservation, commerce, réseau social, outil métier), React Native offre d'excellentes performances.</p>
+
+<h2>Ce que j'en fais au quotidien</h2>
+<p>Je développe toutes mes applications en React Native :</p>
+<ul>
+<li><a href="/projets/klotho/">Klotho</a> : un dressing virtuel avec analyse des photos par IA, météo et abonnements ;</li>
+<li><a href="/projets/wim/">Wim</a> : une plateforme d'échange de logements, disponible sur iOS, Android et le web, avec du code partagé entre l'application et le site.</li>
+</ul>
+
+<h2>En résumé</h2>
+<p>Si votre application doit exister sur iPhone et sur Android, React Native est souvent le choix le plus raisonnable : moins cher, plus rapide à livrer et plus simple à faire évoluer. <a href="/services/application-mobile/">Découvrez l'offre de développement d'application mobile.</a></p>
+</div>
+      <div class="cta-panel">
+        <div class="cta-text">
+          <h3>Un projet en tête ?</h3>
+          <p>Site, application mobile ou outil sur mesure, le premier échange est gratuit et sans engagement.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="/#contact">Demander un devis gratuit</a>
+          <a class="btn btn-ghost" href="https://cal.com/laurabojon/appel-decouverte" target="_blank" rel="noopener">Réserver un appel gratuit</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="section section-alt" aria-labelledby="lire-titre">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">À lire aussi</p>
+        <h2 id="lire-titre">D'autres articles</h2>
+      </div>
+      <div class="article-list">
+        <a class="article-card" href="/articles/prix-site-vitrine/">
+          <p class="article-meta"><time datetime="2026-11-19">19 novembre 2026</time> · 2 min</p>
+          <h3>Combien coûte un site vitrine en 2026 ?</h3>
+          <p>Entre un site fait soi-même et un site réalisé par une agence, les écarts de prix sont énormes. Voici ce qui fait varier le prix d'un site vitrine, et ce qu'il faut prévoir chaque année.</p>
+          <span class="text-link">Lire l'article →</span>
+        </a>
+        <a class="article-card" href="/articles/mentions-obligatoires-site-professionnel/">
+          <p class="article-meta"><time datetime="2026-11-19">19 novembre 2026</time> · 2 min</p>
+          <h3>Les mentions obligatoires d'un site professionnel</h3>
+          <p>Un site professionnel doit afficher certaines informations, et les oublier peut coûter cher. Voici la liste, avec les points qui concernent particulièrement les indépendants.</p>
+          <span class="text-link">Lire l'article →</span>
+        </a>
+        <a class="article-card" href="/articles/prix-application-mobile/">
+          <p class="article-meta"><time datetime="2026-11-19">19 novembre 2026</time> · 2 min</p>
+          <h3>Combien coûte une application mobile ?</h3>
+          <p>Le prix d'une application mobile peut varier du simple au décuple. Voici ce qui le fait bouger, les frais à prévoir après la publication, et comment démarrer sans exploser son budget.</p>
+          <span class="text-link">Lire l'article →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <a class="footer-brand" href="/">
+        <img class="brand-logo" src="/assets/logo-lb.png" width="189" height="176" alt="">
+        <span class="brand-text">
+          <span class="brand-name">Laura Bojon</span>
+          <span class="brand-tagline">Développeuse web et mobile</span>
+        </span>
+      </a>
+      <nav class="footer-links" aria-label="Liens de pied de page">
+        <a href="https://www.linkedin.com/in/laura-bojon-86a7b41a1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/laurabjn" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://g.page/r/CX-nBFtLMPElECE/review" target="_blank" rel="noopener">Laisser un avis Google</a>
+        <a href="/articles/">Articles</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="/conditions-generales.html">Conditions générales</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p>© <span id="annee">2026</span> Laura Bojon EI · Tous droits réservés</p>
+      <p>SIRET 989 670 385 00016</p>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" id="to-top" href="#haut" aria-label="Revenir en haut de la page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</a>
+<!-- Mesure d'audience Cloudflare Web Analytics : sans cookie ni stockage dans le navigateur -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "bc12e6fb880b4ea7b53782594dba30e6"}'></script>
+</body>
+</html>
