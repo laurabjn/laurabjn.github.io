@@ -724,7 +724,7 @@ h3 {
 .stack { display: grid; gap: 24px; }
 .stack-grid { display: grid; gap: 28px 32px; }
 @media (min-width: 560px) { .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 980px) { .stack-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .stack-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .stack-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .stack-group { display: grid; align-content: start; gap: 14px; padding-top: 16px; border-top: 1px solid var(--line); }
 .stack-label { font-weight: 600; }
 

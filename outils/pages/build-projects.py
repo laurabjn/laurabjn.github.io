@@ -65,42 +65,43 @@ PROJECTS = {
         "desc": "Wim (World Is Mine) : plateforme d'échange de logements entre particuliers sur iOS, Android et web, avec swipe, carte et messagerie. Projet de Laura Bojon.",
         "eyebrow": "Projet client · iOS, Android et web",
         "h1": "Wim · World Is Mine",
-        "lead": "Une plateforme d'échange de logements entre particuliers : on parcourt les logements qui donnent envie, on se découvre un intérêt commun, on discute, puis on échange sa maison le temps d'un séjour.",
+        "lead": "Une plateforme d'échange de logements entre particuliers, sur iOS, Android et le web, que je développe pour un client, des fondations techniques jusqu'à la mise en ligne.",
         "badge": ("En développement", "badge"),
         "actions": [],
         "soon": "worldismine.fr · bientôt en ligne",
         "hero_alt": "L'application Wim : une fiche logement à Florence et le logo de l'application",
         "project_h2": "Échanger sa maison, simplement et en confiance",
         "paras": [
-            "Wim met en relation des personnes qui souhaitent échanger leur logement. L'application mobile et le site web offrent la même expérience, en français et en anglais.",
-            "Sur mobile, la découverte des logements se fait par swipe : quand deux personnes s'intéressent mutuellement à leurs logements, un match se crée et une conversation s'ouvre. Vérification d'identité et avis après chaque séjour installent la confiance.",
+            "Wim met en relation des particuliers qui souhaitent échanger leur logement le temps d'un séjour. L'application mobile et le site web offrent la même expérience, en français et en anglais.",
+            "Le projet s'appuie sur un cahier des charges détaillé, validé avec le client, qui décrit chaque fonctionnalité de la première version. Il me sert de référence pour planifier, développer et valider chaque étape.",
         ],
         "facts": [("Type", "Application mobile et site web"), ("Plateformes", "iOS, Android et web"),
                   ("Langues", "Français et anglais"),
                   ("Méthode", "Sprints de trois semaines, développement piloté par les tests"),
                   ("Statut", "En développement")],
-        "features_h2": "Une plateforme complète",
-        "features_cols": 2,
+        "method_first": True,
+        "features_h2": "L'essentiel de la plateforme",
+        "features_cols": 3,
         "features": [
-            ("Swipe et matching", "<p>On aime ou on passe. Quand l'intérêt est réciproque, un match se crée, avec des dates proposées selon les disponibilités de chacun.</p>"),
-            ("Recherche et carte", "<p>Recherche par lieu, capacité, dates et type de logement, avec les résultats en liste ou sur une carte interactive.</p>"),
-            ("Fiches logements", "<p>Photos, équipements, possibilité d'échanger aussi sa voiture, et recommandations locales du propriétaire : restaurants, visites, conseils pratiques.</p>"),
-            ("Messagerie en temps réel", "<p>Une conversation s'ouvre après chaque match, avec traduction automatique des messages, statuts de lecture et possibilité de bloquer un utilisateur.</p>"),
-            ("Recommandations personnalisées", "<p>Les logements proposés tiennent compte des préférences, de la géographie, des dates et de l'historique, avec des critères réglables.</p>"),
-            ("Confiance", "<p>Vérification d'identité, badge « Profil vérifié » et avis obligatoires après chaque séjour.</p>"),
-            ("Abonnements et parrainage", "<p>Abonnement mensuel ou annuel avec paiement en ligne, et un système de parrainage.</p>"),
-            ("Notifications et administration", "<p>Notifications pour les matchs, les messages et les rappels, et un espace d'administration pour la modération.</p>"),
+            ("Swipe et matching", "<p>Quand deux personnes s'intéressent mutuellement à leurs logements, un match se crée.</p>"),
+            ("Messagerie traduite", "<p>Une conversation s'ouvre après chaque match, avec traduction automatique des messages.</p>"),
+            ("Confiance", "<p>Vérification d'identité et avis après chaque séjour.</p>"),
         ],
         "gallery_h2": "L'application en images",
         "gallery_cols": 3,
         "gallery": [("wim/ecran.webp", 421, 988, "La découverte des logements par swipe", False),
                     ("wim/fiche.webp", 421, 988, "La fiche d'un logement et ses disponibilités", False),
-                    ("wim/carte.webp", 421, 988, "La recherche sur carte", False),
-                    ("wim/profil.webp", 421, 988, "Un profil vérifié et ses logements", False),
-                    ("wim/conversation.webp", 421, 988, "Une conversation traduite automatiquement", False),
-                    ("wim/messages.webp", 421, 988, "La liste des conversations et des demandes", False)],
-        "tech_h2": "Une architecture pensée pour durer",
-        "tech_intro": "Le projet est découpé en sprints de trois semaines, avec une démo à la fin de chacun. Les règles les plus sensibles, comme le matching, les blocages et les avis, sont développées en TDD : les tests d'abord, le code ensuite.",
+                    ("wim/conversation.webp", 421, 988, "Une conversation traduite automatiquement", False)],
+        "tech_eyebrow": "Ma méthode",
+        "tech_h2": "Comment je mène le projet",
+        "tech_intro": "Un projet de plusieurs mois demande de l'organisation et de la rigueur. Voici comment je le conduis, du cahier des charges jusqu'à la mise en ligne.",
+        "tech_cols": 3,
+        "tech": [("Un cahier des charges de référence", "Il décrit chaque fonctionnalité de la première version. Une fonctionnalité est livrée quand elle le respecte, qu'elle est testée et qu'elle fonctionne sur iOS, Android et le web."),
+                 ("Des sprints de trois semaines", "Un sprint par grand ensemble : comptes, logements, calendrier, recherche, matching, messagerie… Une démo à la fin de chacun permet au client de suivre l'avancement et d'ajuster les priorités."),
+                 ("Les tests avant le code", "Les règles sensibles, comme le matching, les blocages et les avis, sont développées en TDD : j'écris d'abord le test, puis le code."),
+                 ("Des vérifications automatiques", "À chaque envoi de code, les tests et les contrôles de qualité se lancent seuls, pour qu'une nouvelle fonctionnalité n'en casse pas une autre."),
+                 ("Une base pensée pour durer", "Les règles métier sont indépendantes des outils techniques, et l'application mobile et le site partagent une base de code commune : moins de doublons, la même expérience partout."),
+                 ("Une marge pour les imprévus", "Le dernier sprint est réservé aux tests finaux, aux corrections et aux vérifications RGPD avant la mise en production.")],
     },
     "freyage": {
         "name": "FreyAge",
@@ -232,7 +233,46 @@ def page(slug, p):
         for src, w, h, cap, cover in p["gallery"])
     note = f'\n        <p class="section-intro">{p["gallery_note"]}</p>' if p.get("gallery_note") else ""
     groups = "".join(f'\n          <div class="stack-group"><p class="stack-label">{t}</p><p class="stack-text">{d}</p></div>' for t, d in p.get("tech", []))
-    stack = f'\n      <div class="stack-grid">{groups}\n      </div>' if groups else ""
+    stack_cls = " cols-3" if p.get("tech_cols") == 3 else ""
+    stack = f'\n      <div class="stack-grid{stack_cls}">{groups}\n      </div>' if groups else ""
+    blocks = {
+        "features": ("fonctions-titre", f"""
+      <div class="section-head">
+        <p class="eyebrow">Fonctionnalités</p>
+        <h2 id="fonctions-titre">{p['features_h2']}</h2>
+      </div>
+      <div class="services-grid{cols_cls}">{feats}
+      </div>"""),
+        "gallery": ("captures-titre", f"""
+      <div class="section-head">
+        <p class="eyebrow">Captures d'écran</p>
+        <h2 id="captures-titre">{p['gallery_h2']}</h2>{note}
+      </div>
+      <div class="gallery" style="--cols: {p['gallery_cols']}">{figs}
+      </div>"""),
+        "tech": ("technique-titre", f"""
+      <div class="section-head">
+        <p class="eyebrow">{p.get('tech_eyebrow', 'Technique')}</p>
+        <h2 id="technique-titre">{p['tech_h2']}</h2>
+        <p class="section-intro">{p['tech_intro']}</p>
+      </div>{stack}"""),
+    }
+    cta = """
+      <div class="cta-panel">
+        <div class="cta-text">
+          <h3>Un projet similaire ?</h3>
+          <p>Application mobile, site ou outil sur mesure, le premier échange est gratuit et sans engagement.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="/#contact">Parler de votre projet</a>
+          <a class="btn btn-ghost" href="https://cal.com/laurabojon/appel-decouverte" target="_blank" rel="noopener">Réserver un appel gratuit</a>
+        </div>
+      </div>"""
+    # Ordre des sections après « Le projet » : la méthode d'abord si method_first, le CTA clôt la dernière
+    order = ["tech", "features", "gallery"] if p.get("method_first") else ["features", "gallery", "tech"]
+    middle = "\n\n".join(
+        f'  <section class="section{" section-alt" if n % 2 else ""}" aria-labelledby="{blocks[k][0]}">\n    <div class="wrap">{blocks[k][1]}{cta if n == len(order) - 1 else ""}\n    </div>\n  </section>'
+        for n, k in enumerate(order))
     others = ""
     for o in (s for s in PROJECTS if s != slug):
         op = PROJECTS[o]
@@ -319,47 +359,7 @@ def page(slug, p):
     </div>
   </section>
 
-  <section class="section" aria-labelledby="fonctions-titre">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Fonctionnalités</p>
-        <h2 id="fonctions-titre">{p['features_h2']}</h2>
-      </div>
-      <div class="services-grid{cols_cls}">{feats}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" aria-labelledby="captures-titre">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Captures d'écran</p>
-        <h2 id="captures-titre">{p['gallery_h2']}</h2>{note}
-      </div>
-      <div class="gallery" style="--cols: {p['gallery_cols']}">{figs}
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="technique-titre">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Technique</p>
-        <h2 id="technique-titre">{p['tech_h2']}</h2>
-        <p class="section-intro">{p['tech_intro']}</p>
-      </div>{stack}
-      <div class="cta-panel">
-        <div class="cta-text">
-          <h3>Un projet similaire ?</h3>
-          <p>Application mobile, site ou outil sur mesure, le premier échange est gratuit et sans engagement.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn" href="/#contact">Parler de votre projet</a>
-          <a class="btn btn-ghost" href="https://cal.com/laurabojon/appel-decouverte" target="_blank" rel="noopener">Réserver un appel gratuit</a>
-        </div>
-      </div>
-    </div>
-  </section>
+{middle}
 
   <section class="section section-alt" aria-labelledby="autres-titre">
     <div class="wrap">
