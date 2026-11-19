@@ -53,7 +53,6 @@ PROJECTS = {
                     ("klotho/k5.webp", 720, 1280, "Le calendrier des tenues de la semaine", True),
                     ("klotho/k6.webp", 720, 1280, "La création d'une tenue selon le style, l'occasion et la météo", True)],
         "tech_h2": "Ce que le projet a demandé",
-        "tools": ["React Native", "Expo", "IA open source (analyse d'images)", "API météo open source", "CI/CD GitHub Actions"],
         "tech_intro": "Développée en React Native avec Expo, Klotho combine reconnaissance d'images, données météo et abonnements, dans une application qui doit rester simple à utiliser chaque matin.",
         "tech": [("IA et photos", "Analyse des photos par un modèle d'IA open source, pour remplir automatiquement la fiche de chaque vêtement."),
                  ("Météo locale", "Tenues proposées chaque matin selon la météo de la ville, grâce à une API météo open source."),
@@ -104,10 +103,6 @@ PROJECTS = {
                     ("wim/messages.webp", 421, 988, "La liste des conversations et des demandes", False)],
         "tech_h2": "Une architecture pensée pour durer",
         "tech_intro": "Le projet est découpé en sprints de trois semaines, avec une démo à la fin de chacun. Les règles les plus sensibles, comme le matching, les blocages et les avis, sont développées en TDD : les tests d'abord, le code ensuite.",
-        "tech_tags": [("Mobile et web", ["React Native", "Next.js", "Monorepo partagé"]),
-                      ("Back-end", ["NestJS", "API REST", "WebSockets", "JWT"]),
-                      ("Données", ["PostgreSQL", "Sauvegardes quotidiennes", "RGPD"]),
-                      ("Qualité", ["Clean Architecture", "TDD (Jest, Supertest)", "Docker", "GitHub Actions"])],
     },
     "freyage": {
         "name": "FreyAge",
@@ -151,7 +146,6 @@ PROJECTS = {
                     ("freyage/carte-cadeau.webp", 476, 992, "L'offre de cartes cadeaux", False),
                     ("freyage/portfolio.webp", 476, 992, "Le portfolio, filtrable par style", False)],
         "tech_h2": "Ce que le projet a demandé",
-        "tools": ["HTML / CSS", "JavaScript", "Stripe", "Formspree", "Cloudflare Turnstile", "Cloudflare Web Analytics", "GitHub Pages"],
         "tech_intro": "Un site rapide et facile à faire évoluer, qui reçoit des demandes de rendez-vous et des paiements sans serveur à maintenir.",
         "tech": [("Rendez-vous", "Formulaire en plusieurs étapes, envoyé par Formspree et protégé par le captcha Cloudflare Turnstile."),
                  ("Paiement", "Cartes cadeaux réglées en ligne avec Stripe, sans aucune donnée bancaire sur le site."),
@@ -239,14 +233,8 @@ def page(slug, p):
         f'\n        <figure><div class="gallery-media{" is-cover" if cover else ""}"><img src="/assets/projets/{src}" width="{w}" height="{h}" alt="{cap}" loading="lazy" decoding="async"></div><figcaption>{cap}</figcaption></figure>'
         for src, w, h, cap, cover in p["gallery"])
     note = f'\n        <p class="section-intro">{p["gallery_note"]}</p>' if p.get("gallery_note") else ""
-    if "tech_tags" in p:
-        groups = "".join(f'\n          <div class="stack-group"><p class="stack-label">{t}</p><ul class="tags">' + "".join(f"<li>{x}</li>" for x in tags) + "</ul></div>" for t, tags in p["tech_tags"])
-    else:
-        groups = "".join(f'\n          <div class="stack-group"><p class="stack-label">{t}</p><p class="stack-text">{d}</p></div>' for t, d in p["tech"])
-    tools = ""
-    if p.get("tools"):
-        tools = ('\n      <div class="tools"><p class="stack-label">Outils utilisés</p><ul class="tags">'
-                 + "".join(f"<li>{t}</li>" for t in p["tools"]) + "</ul></div>")
+    groups = "".join(f'\n          <div class="stack-group"><p class="stack-label">{t}</p><p class="stack-text">{d}</p></div>' for t, d in p.get("tech", []))
+    stack = f'\n      <div class="stack-grid">{groups}\n      </div>' if groups else ""
     others = ""
     for o in (s for s in PROJECTS if s != slug):
         op = PROJECTS[o]
@@ -361,9 +349,7 @@ def page(slug, p):
         <p class="eyebrow">Technique</p>
         <h2 id="technique-titre">{p['tech_h2']}</h2>
         <p class="section-intro">{p['tech_intro']}</p>
-      </div>
-      <div class="stack-grid">{groups}
-      </div>{tools}
+      </div>{stack}
       <div class="cta-panel">
         <div class="cta-text">
           <h3>Un projet similaire ?</h3>

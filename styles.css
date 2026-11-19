@@ -800,7 +800,6 @@ h3 {
   background: var(--rose);
 }
 .stack-text { color: var(--ink-soft); }
-.tools { display: grid; gap: 12px; }
 
 /* Galerie : défilement horizontal sur mobile, grille sur grand écran */
 .gallery {
